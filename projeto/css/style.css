@@ -1,0 +1,330 @@
+/*
+ * Folha de Estilos 
+ */
+
+/* -------- Configurações gerais ---------- */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+@font-face {
+	font-family: "Florida";
+	src: url("../fontes/florida-demibold.ttf");
+}
+
+@font-face {
+	font-family: "Trajan";
+	src: url("../fontes/trajan-pro.otf");
+}
+
+ul {
+	list-style: none;
+}
+
+a, a:hover, a:active, a:link, a:visited {
+	color: white !important;
+	background-color: transparent;
+	text-decoration: none;
+}
+	
+/* ---------- Barra de Navegação ---------- */
+#barra-navegacao{
+	background: black;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+#lista {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 80%;
+}
+
+/* ---------- Seção Principal ---------- */
+
+#principal{
+	color: white;
+	background-image: url("../imagens/fundo.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding-top: 200px;
+	padding-bottom: 300px;
+	text-align: center;
+}
+
+#principal-titulo{
+	width: 100%;
+	font-size: 100px;
+	text-align: center;
+	font-family: "Florida";
+	margin-bottom: -15px;
+}
+
+#principal-subtitulo{
+	font-size: 35px;
+	text-align: center;
+	font-family: "Trajan";
+	margin-top: -15px;
+}
+
+/* ---------- Bloco flutuante  ---------- */
+
+#delivery {
+	position: fixed;
+	z-index: 100;
+	width: 80px;
+	height: 80px;
+	padding: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	float: right;
+	right: 0;
+	margin-right: 10px;
+
+	text-align: center;
+	display: flex;
+	align-items: center;
+
+	font-family: "Florida";
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	background-color: blue;
+	color: white;
+	border-radius: 25%;
+	box-shadow: 10px 10px 10px black;
+}
+
+/* ---------- Seção Sobre Nós ---------- */
+
+#sobrenos{
+	margin: 0 auto;
+	width: 50%;
+	background-color: transparent;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+#sobrenos-titulo{
+	font-size: 35px;
+	font-family: "Florida";
+	color: red;
+	margin-bottom: 20px;
+}
+
+#sobrenos-texto{
+	text-align: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#sobrenos-colimagem{
+	text-align: left;
+}
+
+#sobrenos-imagem{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* ---------- Seção Cardápio ---------- */
+
+#titulo{
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	background-color: black;
+}
+
+#-titulo{
+	font-size: 35px;
+	font-family: "Florida";
+	color: white;
+	margin-bottom: 20px;
+}
+
+#slide{
+	margin: 0 auto;
+}
+
+#slide-titulo{
+	font-family: "Florida";
+	color: red;
+}
+
+#slide-subtitulo{
+	font-family: "Trajan";
+	color: white;
+}
+
+.carousel-indicators .active{
+    background-color: blue;
+}
+
+/* ---------- Seção Contato ---------- */
+
+#contato{
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: blue;
+	color: white;
+}
+
+#contato-titulo{
+	font-size: 35px;
+	font-family: "Florida";
+	color: white;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+#contato-informacoes{
+	margin: 0 auto;
+	width: 60%;
+}
+
+#topico-titulo{
+	margin-top: 20px;
+	margin-bottom: 1px;
+	font-weight: bold;
+	display: block;
+	font-size: 20px;
+}
+
+#topico-conteudo{
+	margin-top: 1px;
+	margin-bottom: 1px;
+	display: block;
+}
+
+#mapa{
+	height: 100%;
+	width: 100%;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 1000px){
+
+	#barra-navegacao{
+		background: black;
+		position: fixed;
+		height: auto;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+
+	#lista {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		height: 60%;
+	}
+
+	#principal{
+		padding-top: 200px;
+		padding-bottom: 250px;
+	}
+
+	#principal-titulo{
+		width: 100%;
+		font-size: 60px;
+		text-align: center;
+		font-family: "Florida";
+		margin-bottom: -5px;
+	}
+
+	#principal-subtitulo{
+		font-size: 30px;
+		text-align: center;
+		font-family: "Trajan";
+		margin-top: -5px;
+	}
+
+	#sobrenos{
+		margin: 0 auto;
+		width: 80%;
+		background-color: transparent;
+		text-align: center;
+	}
+
+	#sobrenos-titulo{
+		font-size: 35px;
+		font-family: "Florida";
+		color: red;
+		margin-bottom: 20px;
+	}
+
+	#sobrenos-texto{
+		text-align: justify;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	#sobrenos-colimagem{
+		text-align: center;
+	}
+
+	#sobrenos-imagem{
+		/*
+		width: 400px;
+		height: 400px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		*/
+	}
+
+	#contato-informacoes{
+		width: 80%;
+	}
+
+}
+
+@media (max-width: 768px){
+
+	#sobrenos-imagem{
+		width: 200px;
+		height: 200px;
+		/*
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%);
+		transform: translateY(-50%);
+		*/
+	}
+
+	#mapa {
+		margin-top: 20px;
+	}
+
+	#bn-img {
+		width: 60px;
+		height: 60px;
+	}
+
+}

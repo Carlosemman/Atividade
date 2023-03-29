@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Cad produts </title>
+	
+	<!-- Importações de Estilo -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- Metatags -->
+	<meta charset="UTF-8"/>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0"/>
+
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">	
+		$(document).ready(function(){
+
+			// Animação para suavizar ao navegar entre os itens da barra de navegação
+			// Obtem o tamanho da tela
+			var width = screen.width;
+			// Para quando a barra de navegação for vertical
+			if (width >= 1000) {
+				$("nav a").click(function(e){
+					e.preventDefault();
+					var trans = $(this).attr('href'), targetOffeset = $(trans).offset().top;
+					$('html, body').animate({scrollTop: targetOffeset}, 600);
+				});
+			// Para quando a barra de navegação for horizontal
+			// (Responsividade para Tablet e Smartphone)
+			} else {
+				$("nav a").click(function(e){
+					e.preventDefault();
+					var trans = $(this).attr('href'), targetOffeset = $(trans).offset().top, menuHeight = $("nav").innerHeight();
+					$('html, body').animate({scrollTop: targetOffeset - menuHeight}, 600);
+				});
+			}
+
+			// Bloco flutuante 
+			$("#delivery").click(function(){
+				window.open("");
+			})
+			$("#delivery").mouseenter(function(){
+				document.getElementById("delivery").style.cursor = "pointer";
+			})
+			$("#delivery").mouseout(function(){
+				document.getElementById("delivery").style.cursor = "default";
+			})
+
+		});
+	</script>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57"   href="imagens/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60"   href="imagens/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72"   href="imagens/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76"   href="imagens/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="imagens/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="imagens/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="imagens/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="imagens/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="imagens/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32"    href="imagens/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96"    href="imagens/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16"    href="imagens/favicon-16x16.png">
+	<link rel="manifest" href="imagens/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="imagens/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+	<!-- Barra de Navegação -->
+	<nav id="barra-navegacao">
+		<ul id="lista">
+			<!-- Principal -->
+			<li><a href="#principal"><img id="bn-img" src="imagens/logo2 (1).png" class="img-fluid"></a></li>
+
+			<!-- Sobre Nós-->
+			<li><a href="#sobrenos"><img id="bn-img" src="imagens/sobrenos-.png" width="75" height="75" class="img-fluid"></a></li>
+
+			<!-- Cardápio -->
+			<li><a href="#cardapio"><img id="bn-img" src="imagens/produtos-.png" width="95" height="95" class="img-fluid"></a></li>
+
+			<!-- Contato -->
+			<li><a href="#contato"><img id="bn-img" src="imagens/contato-.png" width="75" height="75" class="img-fluid"></a></li>
+		</ul>
+	</nav>
+
+
+
+	<!-- Bloco flutuante   -->
+	<div id="delivery"> Não tem cadastro?</div>
+
+
+
+	<!-- Seção Principal -->
+	<section id="principal">
+		<div class="row">
+			<div class="col">
+				<label id="principal-titulo"><label style="color: blue;"> Supermercado </label> São José </label>
+				<label id="principal-subtitulo">Cad produts </label>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Seção Sobre Nós -->
+	<section id="sobrenos">
+
+		<!-- Título -->
+		<div class="row">
+			<div class="col">
+				<label id="sobrenos-titulo"> SOBRE NÓS</label>
+			</div>
+		</div>
+		
+		<!-- Conteúdo -->
+		<div class="row">
+			<div class="col-md-8 col-sm-12">
+				<p id="sobrenos-texto">Nosso foco é entregar produtos de qualidade aos nossos
+				clientes com alta qualidade alinhado com um bom atendimento. 
+				Proporcionar os clientes uma excelente experiência em um ambiente agradável e aconchegante. 
+				A Organização com atendimento de excelência ao cliente e uma variedade de de produtos.</p>
+			</div>
+			<div class="col-md-4 col-sm-12" id="sobrenos-colimagem">
+				<img id="sobrenos-imagem" src="imagens/LOGO Sj.jpg" class="img-fluid">
+			</div>
+		</div>
+
+	</section>
+
+
+
+	<!-- Seção -->
+	<section id="titulo">
+
+		<!-- Título -->
+		<div class="row">
+			<div class="col">
+				<label id="-titulo"> Produtos </label>
+			</div>
+		</div>
+
+		<!-- Conteúdo -->
+		<div class="row" id="conteudo">
+			
+			<!-- Slide de Imagens -->
+			<div id="slide" class="carousel slide" data-ride="carousel">
+
+				<!-- Indicatores -->
+				<ul class="carousel-indicators">
+					<li data-target="#slide" data-slide-to="0" class="active"></li>
+					<li data-target="#slide" data-slide-to="1"></li>
+					<li data-target="#slide" data-slide-to="2"></li>
+				</ul>
+		  
+				<!-- Imagens  -->
+				<div class="carousel-inner">
+					<div class="carousel-item active"> 
+						<img src="" class="img-fluid">
+						<div class="carousel-caption">
+							<h2 id="slide-titulo"> slide 1 </h2>
+							<p id="slide-subtitulo"> Descrição </p>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<img src="" class="img-fluid">
+						<div class="carousel-caption">
+							<h2 id="slide-titulo">slide 2</h2>
+							<p id="slide-subtitulo"></p>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<img src="" class="img-fluid">
+						<div class="carousel-caption">
+							<h2 id="slide-titulo">slide 3</h2>
+							<p id="slide-subtitulo"></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<!-- Seção Contato -->
+	<section id="contato">
+
+		<!-- Título -->
+		<div class="row">
+			<div class="col">
+				<label id="contato-titulo"> Suporte </label>
+			</div>
+		</div>
+
+		<!-- Conteúdo -->
+		<div class="row" id="contato-informacoes">
+
+			<!-- Informações de Contato -->
+			<div class="col-md-6 col-sm-12">
+
+				<label id="topico-titulo"> Suporte </label>
+				<label id="topico-conteudo"><a href="mailto:ti@saojosecomercio.com.br">ti@saojosecomercio.com.br</a></label>
+				<label id="topico-conteudo"><a href="tel:92994511865"> 92 994511865</a></label>
+				<a href="" target="_blank"><img src="imagens/facebook.png" width="50px" height="50px" class="img-fluid"></a>
+				<a href="" target="_blank"><img src="imagens/instagram.png"  width="50px" height="50px" class="img-fluid"></a>
+
+				<label id="topico-titulo">Endereço</label>
+				<label id="topico-conteudo">Rua Yanomami N 117, Bairro Colônia terra Nova</label>
+				<label id="topico-conteudo">Cep: 69093-590</label>
+				<label id="topico-titulo"> HORÁRIO DE FUNCIONAMENTO</label>
+				<label id="topico-conteudo">SEGUNDA A SABÁDO: 07:00 as 21:00</label>
+				<label id="topico-conteudo">DOMINGO: 07:00 as 14:00</label>
+			</div>
+
+			<!-- API Google Maps -->
+			<div class="col-md-6 col-sm-12">
+				<iframe id="mapa" src="https://www.google.com.br/maps/place/Supermercado+S%C3%A3o+Jos%C3%A9/@-3.0255477,-60.0082548,21z/data=!4m5!3m4!1s0x926c19f24e2e5b19:0xf58ac514cb7e466a!8m2!3d-3.0255312!4d-60.0081526?hl=pt-BR" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+
+		</div>
+
+	</section>
+
+</body>
+</html>
